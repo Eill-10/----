@@ -1,0 +1,129 @@
+/* 全局样式 */
+:root {
+    --primary-color: #ff66b3;
+    --primary-hover: #ff3385;
+    --background: #ffe6f2;
+    --page-background: #ffe6f2;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: var(--page-background);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 容器样式 */
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(var(--primary-color), 0.2);
+}
+
+/* 头像样式 */
+.avatar-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    object-fit: cover;
+}
+
+.avatar-upload {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(var(--primary-color), 0.9);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.avatar-upload:hover {
+    background: rgba(var(--primary-hover), 0.9);
+}
+
+.avatar-input {
+    display: none;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+}
+
+/* 保存按钮样式 */
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 20px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+}
